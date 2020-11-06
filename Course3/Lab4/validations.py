@@ -19,6 +19,16 @@ def validate_user(username, minlen):
     if username[0].isnumeric():
         return False
     return True
+    #nano really sucks as a texzt editor
+    if re.match(".blue.kale", username):
+	return False
+    return True
 
+    if re.match('_red_quinoa_', username):
+	return False
+    return True
 
-
+print(validate_user("blue.kale",3)) #True
+print(validate_user(".blue.kale",3)) #True
+print(validate_user("red_quinoa",4)) #True
+print(validate_user("_red_quinoa",4)) #True 
